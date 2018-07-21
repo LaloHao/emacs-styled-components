@@ -3,6 +3,8 @@
   component context to edit in popup buffer just like babel in
   org-mode Emacs.
 
+  [[file:popup.png][dummy]]
+
   Dependencies
 
   #+BEGIN_SRC emacs-lisp
