@@ -1,11 +1,11 @@
 * emacs-styled-components
-  Set key =C-'= or call =fence-edit-code-at-point= inside the styled
+  Set key =C-'=, or call =fence-edit-code-at-point= inside the styled
   component context to edit in popup buffer just like babel in
   org-mode Emacs.
 
-  [[file:popup.png][dummy]]
+  [[file:popup.png]]
 
-  Dependencies
+  Dependencies:
 
   #+BEGIN_SRC emacs-lisp
     (require 'css-mode)
