@@ -1,0 +1,39 @@
+* emacs-styled-components
+  Set key =C-'= or call =fence-edit-code-at-point= inside the styled
+  component context to edit in popup buffer just like babel in
+  org-mode Emacs.
+
+  Dependencies
+
+  #+BEGIN_SRC emacs-lisp
+    (require 'css-mode)
+    (require 'fence-edit)
+    (require 'rx)
+    (require 'ov)
+  #+END_SRC
+
+  Note it is not aware if the tags are actually an instance of =styled= (yet)
+
+  Detects either a string, a component's subproperty, or a component's
+  method call.
+
+  Basically this, and anything inside:
+
+  #+BEGIN_SRC js
+    export const Container = styled.div`
+    `;
+    Container.Settings = Container.Row.extend`
+    `;
+    export const Scrollbar = styled(Scrollbars)`
+    `;
+    let unawareOfTagsName = aaaa.aaaaaaaaaa.aaaaaaaa.aaaaaaa(arg)`
+    `;
+  #+END_SRC
+
+** TODO Wishable [0/3]
+   - [ ] Fence alternative AKA see below
+     - [ ] In buffer edit
+     - [ ] Override keymap when cursor is in styled context
+     - [ ] Syntax highlight
+   - [ ] Context aware?
+   - [ ] Autocomplete snippets
